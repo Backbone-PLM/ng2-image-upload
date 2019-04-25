@@ -10,6 +10,7 @@ export class FileDropDirective {
 
   @HostListener('drop', ['$event'])
   onDrop(event: any) {
+    debugger;
     let dataTransfer = FileDropDirective.getDataTransfer(event)
 
     if (!FileDropDirective.hasFiles(dataTransfer.types)) {
