@@ -125,7 +125,7 @@ export class ImageUploadComponent implements OnInit, OnChanges {
   private onResponse(response: Response, fileHolder: FileHolder) {
     fileHolder.serverResponse = { status: response.status, response }
     fileHolder.pending = false
-
+    debugger
     this.uploadFinished.emit(fileHolder)
 
     if (--this.pendingFilesCounter == 0) {
@@ -225,6 +225,7 @@ export class ImageUploadComponent implements OnInit, OnChanges {
           }
         )
     } else {
+      debugger
       this.uploadFinished.emit(fileHolder)
     }
   }
