@@ -99,6 +99,7 @@ export class ImageUploadComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes) {
     if (changes.uploadedFiles && changes.uploadedFiles.currentValue.length > 0) {
+      console.log(changes.uploadedFiles)
       this.processUploadedFiles()
     }
   }
@@ -135,7 +136,7 @@ export class ImageUploadComponent implements OnInit, OnChanges {
 
   private processUploadedFiles() {
     debugger
-
+    console.log('in image upload', this.uploadFiles)
     for (let i = 0; i < this.uploadedFiles.length; i++) {
       let data: any = this.uploadedFiles[i]
 
