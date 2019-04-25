@@ -166,7 +166,7 @@ export class ImageUploadComponent implements OnInit, OnChanges {
         this.uploadStateChanged.emit(false)
         continue
       }
-
+      debugger
       const beforeUploadResult: UploadMetadata = await this.beforeUpload({
         file,
         url: this.url,
